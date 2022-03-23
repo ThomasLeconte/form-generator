@@ -1,0 +1,19 @@
+{
+    "name": "thomasleconte/form-generator",
+    "description": "PHP form generator compatible with Doctrine",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "FormGenerator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ThomasL",
+            "email": "thomasleconte05@gmail.com"
+        }
+    ],
+    "require": {}
+}
