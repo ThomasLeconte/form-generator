@@ -1,4 +1,6 @@
 # Form generator
+> **composer require thomasleconte/form-generator**
+
 This is a library that make you able to generate a form. This library use reflection principle to generate the best result from a class name or an existing object.  
 This form generator is compatible with Doctrine ORM. In fact, if one of your property doesn't have a PHP type, but a Doctrine type annotation, it will take this one.
 Moreover, in the case of a select list generation, you can fill the list with Doctrine by specifying class name, key attribute and attribute value.  
