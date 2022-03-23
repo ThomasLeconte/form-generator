@@ -15,5 +15,10 @@
             "email": "thomasleconte05@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "doctrine/orm": "^2.11",
+        "doctrine/annotations": "^1.13",
+        "symfony/cache": "^5.4"
+    }
 }
