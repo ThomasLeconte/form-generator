@@ -80,7 +80,7 @@ class FormItem
                     $this->fieldContent.= ">";
                 }
             } else {
-                $this->fieldContent .= "<input type='".$this->fieldOptions["type"];
+                $this->fieldContent .= "<input type='".$this->fieldOptions["type"]."'";
                 $this->applyProperties($this->fieldContent, $this->fieldOptions, ["surround", "items"]);
 
                 if (!array_key_exists("name", $this->fieldOptions)) {
