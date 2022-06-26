@@ -158,14 +158,21 @@ class FormGenerator
                 $fieldOptions = $fieldsOptions[$property->getName()];
             }
 
-            $formItem = null;
-            if ($this->getFormFieldByName($property->getName()) != null) {
-                $formItem = $this->getFormFieldByName($property->getName());
-                $formItem->generate($formItem->getFieldOptions());
-            } else {
-                $formItem = new FormItem($this, $property);
-                $formItem->generate($fieldOptions);
-                array_push($this->formItems, $formItem);
+            if($property->getName() !== "id"){
+                $formItem = null;
+                if(array_key_exists("hide", $fieldOptions)){
+                    if($fieldOptions["hide"]){
+                        continue;
+                    }
+                }
+                if ($this->getFormFieldByName($property->getName()) != null) {
+                    $formItem = $this->getFormFieldByName($property->getName());
+                    $formItem->generate($formItem->getFieldOptions());
+                } else {
+                    $formItem = new FormItem($this, $property);
+                    $formItem->generate($fieldOptions);
+                    array_push($this->formItems, $formItem);
+                }
             }
         }
         for ($i = 0; $i < count($this->formItems); $i++) {

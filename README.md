@@ -42,6 +42,15 @@ $generator->generate($user, "/register", [
 $generator->show();
 ```
 
+You can also decide to hide one of fields. **By default, "id" field of your entity is hidden and you can't override it**. You can hide others one with "hide" field option :
+````php
+...
+$generator->generate($user, "/register", [
+    "age" => [ "hide" => true ]
+]);
+...
+````
+
 ## Personalize your form
 Like inputs personalization, you can add all attributes that you want, just like that :
 ```php
