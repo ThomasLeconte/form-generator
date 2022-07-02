@@ -7,6 +7,16 @@ Moreover, in the case of a select list generation, you can fill the list with Do
 
 **Check this out !**
 
+## Summary
+[Construction](#construction)  
+[Basic generation](#basic-generation)  
+[Personalize inputs](#personalize-your-inputs)  
+[Personalize form](#personalize-your-form)  
+[Surround your inputs / form](#surround-your-inputs--form)  
+[Special inputs](#special-inputs)  
+[Hydrate dynamically select field](#select-field)  
+
+
 ## Construction
 ```php
 $generator = new FormGenerator();
@@ -28,6 +38,16 @@ Or with a current object :
 $user = new User("Elon", "Musk", 50);
 
 $generator->generate($user, "/register");
+$generator->show();
+```
+
+You can add attribute to a field after generated a form. Update is also available :
+```php
+...
+$generator->generate($user, "/register");
+...
+$generator->addAttribute("firstname", "placeholder", "Your first name");
+$generator->updateAttribute("firstname", "placeholder", "I don't know what to write here");
 $generator->show();
 ```
 
